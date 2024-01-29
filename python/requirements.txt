@@ -1,4 +1,0 @@
-pyarrow
-ipykernel
-deltalake
-pythonnet

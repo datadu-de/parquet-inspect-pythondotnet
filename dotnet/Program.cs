@@ -9,9 +9,27 @@ class Program
 
     static string pyPackages = @"/Users/frank/Code/parquet-inspect-pythondotnet/.venv/lib/python3.11/site-packages";
 
+    public static void ListFiles(string deltaTablePath)
+    {
+        Console.WriteLine("ListFiles:");
+
+        using (Py.GIL())
+        {
+            dynamic os = Py.Import("os");
+            dynamic sys = Py.Import("sys");
+            sys.path.append(os.getcwd());
+            sys.path.append(pyPackages);
+
+            dynamic dl = Py.Import("deltalake");
+            dynamic dt = dl.DeltaTable(deltaTablePath);
+            dynamic result = dt.files();
+
+            Console.WriteLine(result);
+        }
+    }
     public static void ReadSchema(string deltaTablePath)
     {
-        Console.WriteLine("ReadSchema:");
+        Console.WriteLine("ReadHistory:");
 
         using (Py.GIL())
         {
@@ -41,7 +59,43 @@ class Program
 
             dynamic dl = Py.Import("deltalake");
             dynamic dt = dl.DeltaTable(deltaTablePath);
-            dynamic result = dt.history(1);
+            dynamic result = dt.history();
+
+            Console.WriteLine(result);
+        }
+    }
+    public static void ReadMetadata(string deltaTablePath)
+    {
+        Console.WriteLine("ReadMetadata:");
+
+        using (Py.GIL())
+        {
+            dynamic os = Py.Import("os");
+            dynamic sys = Py.Import("sys");
+            sys.path.append(os.getcwd());
+            sys.path.append(pyPackages);
+
+            dynamic dl = Py.Import("deltalake");
+            dynamic dt = dl.DeltaTable(deltaTablePath);
+            dynamic result = dt.metadata();
+
+            Console.WriteLine(result);
+        }
+    }
+    public static void CurrentAddActions(string deltaTablePath)
+    {
+        Console.WriteLine("CurrentAddActions:");
+
+        using (Py.GIL())
+        {
+            dynamic os = Py.Import("os");
+            dynamic sys = Py.Import("sys");
+            sys.path.append(os.getcwd());
+            sys.path.append(pyPackages);
+
+            dynamic dl = Py.Import("deltalake");
+            dynamic dt = dl.DeltaTable(deltaTablePath);
+            dynamic result = dt.get_add_actions(true);
 
             Console.WriteLine(result);
         }
@@ -58,7 +112,10 @@ class Program
 
         string deltaTablePath = @"../data/delta-tables/sales_salesorderheader.delta";
 
+        ListFiles(deltaTablePath);
         ReadSchema(deltaTablePath);
         ReadHistory(deltaTablePath);
+        ReadMetadata(deltaTablePath);
+        CurrentAddActions(deltaTablePath);
     }
 }
