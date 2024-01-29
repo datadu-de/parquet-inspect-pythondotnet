@@ -1,4 +1,9 @@
-# Output
+## Links
+
+- <https://delta-io.github.io/delta-rs/python/usage.html>
+- <https://pythonnet.github.io/pythonnet/dotnet.html>
+
+## Output
 
 ```
 Hello, World!
