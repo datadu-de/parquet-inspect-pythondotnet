@@ -2,19 +2,23 @@
 
 ```
 Hello, World!
-Loaded '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.1/Microsoft.CSharp.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+
+
 ListFiles:
-Loaded '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.1/System.Reflection.Emit.ILGeneration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-Loaded '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.1/System.Reflection.Emit.Lightweight.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-Loaded '/usr/local/share/dotnet/shared/Microsoft.NETCore.App/8.0.1/System.Reflection.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
-Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
 ['2-1f7ae4d2-1cc7-45bf-86b0-466a2c13b4f4-0.parquet']
+
+
 ReadHistory:
 Schema([Field(SalesOrderID, PrimitiveType("integer"), nullable=True), Field(RevisionNumber, PrimitiveType("byte"), nullable=True), Field(OrderDate, PrimitiveType("timestamp"), nullable=True), Field(DueDate, PrimitiveType("timestamp"), nullable=True), Field(ShipDate, PrimitiveType("timestamp"), nullable=True), Field(Status, PrimitiveType("byte"), nullable=True), Field(OnlineOrderFlag, PrimitiveType("boolean"), nullable=True), Field(SalesOrderNumber, PrimitiveType("string"), nullable=True), Field(PurchaseOrderNumber, PrimitiveType("string"), nullable=True), Field(AccountNumber, PrimitiveType("string"), nullable=True), Field(CustomerID, PrimitiveType("integer"), nullable=True), Field(SalesPersonID, PrimitiveType("integer"), nullable=True), Field(TerritoryID, PrimitiveType("integer"), nullable=True), Field(BillToAddressID, PrimitiveType("integer"), nullable=True), Field(ShipToAddressID, PrimitiveType("integer"), nullable=True), Field(ShipMethodID, PrimitiveType("integer"), nullable=True), Field(CreditCardID, PrimitiveType("integer"), nullable=True), Field(CreditCardApprovalCode, PrimitiveType("string"), nullable=True), Field(CurrencyRateID, PrimitiveType("integer"), nullable=True), Field(SubTotal, PrimitiveType("double"), nullable=True), Field(TaxAmt, PrimitiveType("double"), nullable=True), Field(Freight, PrimitiveType("double"), nullable=True), Field(TotalDue, PrimitiveType("double"), nullable=True), Field(Comment, PrimitiveType("string"), nullable=True), Field(rowguid, PrimitiveType("string"), nullable=True), Field(ModifiedDate, PrimitiveType("timestamp"), nullable=True)])
+
 ReadHistory:
 [{'timestamp': 1702735145541, 'operation': 'WRITE', 'operationParameters': {'mode': 'Overwrite', 'partitionBy': '[]'}, 'clientVersion': 'delta-rs.0.17.0', 'version': 2}, {'timestamp': 1702735097303, 'operation': 'WRITE', 'operationParameters': {'partitionBy': '[]', 'mode': 'Overwrite'}, 'clientVersion': 'delta-rs.0.17.0', 'version': 1}, {'timestamp': 1702735022032, 'operation': 'CREATE TABLE', 'operationParameters': {'protocol': '{"minReaderVersion":1,"minWriterVersion":2,"readerFeatures":null,"writerFeatures":null}', 'mode': 'ErrorIfExists', 'location': 'file:///Users/frank/Code/parquet-inspect/data/deltalake/sales_salesorderheader.delta', 'metadata': '{"configuration":{},"created_time":1702735022031,"description":null,"format":{"options":{},"provider":"parquet"},"id":"52a2d777-bc2e-433f-8818-3b7f4bb667bd","name":null,"partition_columns":[],"schema":{"fields":[{"metadata":{},"name":"SalesOrderID","nullable":true,"type":"integer"},{"metadata":{},"name":"RevisionNumber","nullable":true,"type":"byte"},{"metadata":{},"name":"OrderDate","nullable":true,"type":"timestamp"},{"metadata":{},"name":"DueDate","nullable":true,"type":"timestamp"},{"metadata":{},"name":"ShipDate","nullable":true,"type":"timestamp"},{"metadata":{},"name":"Status","nullable":true,"type":"byte"},{"metadata":{},"name":"OnlineOrderFlag","nullable":true,"type":"boolean"},{"metadata":{},"name":"SalesOrderNumber","nullable":true,"type":"string"},{"metadata":{},"name":"PurchaseOrderNumber","nullable":true,"type":"string"},{"metadata":{},"name":"AccountNumber","nullable":true,"type":"string"},{"metadata":{},"name":"CustomerID","nullable":true,"type":"integer"},{"metadata":{},"name":"SalesPersonID","nullable":true,"type":"integer"},{"metadata":{},"name":"TerritoryID","nullable":true,"type":"integer"},{"metadata":{},"name":"BillToAddressID","nullable":true,"type":"integer"},{"metadata":{},"name":"ShipToAddressID","nullable":true,"type":"integer"},{"metadata":{},"name":"ShipMethodID","nullable":true,"type":"integer"},{"metadata":{},"name":"CreditCardID","nullable":true,"type":"integer"},{"metadata":{},"name":"CreditCardApprovalCode","nullable":true,"type":"string"},{"metadata":{},"name":"CurrencyRateID","nullable":true,"type":"integer"},{"metadata":{},"name":"SubTotal","nullable":true,"type":"double"},{"metadata":{},"name":"TaxAmt","nullable":true,"type":"double"},{"metadata":{},"name":"Freight","nullable":true,"type":"double"},{"metadata":{},"name":"TotalDue","nullable":true,"type":"double"},{"metadata":{},"name":"Comment","nullable":true,"type":"string"},{"metadata":{},"name":"rowguid","nullable":true,"type":"string"},{"metadata":{},"name":"ModifiedDate","nullable":true,"type":"timestamp"}],"type":"struct"}}'}, 'clientVersion': 'delta-rs.0.17.0', 'version': 0}]
+
+
 ReadMetadata:
 Metadata(id: 52a2d777-bc2e-433f-8818-3b7f4bb667bd, name: None, description: None, partition_columns: [], created_time: 1702735022031, configuration: {})
+
+
 CurrentAddActions:
 pyarrow.RecordBatch
 path: string not null
