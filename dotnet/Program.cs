@@ -11,6 +11,8 @@ class Program
 
     public static void ReadSchema(string deltaTablePath)
     {
+        Console.WriteLine("ReadSchema:");
+
         using (Py.GIL())
         {
             dynamic os = Py.Import("os");
@@ -28,6 +30,8 @@ class Program
 
     public static void ReadHistory(string deltaTablePath)
     {
+        Console.WriteLine("ReadHistory:");
+
         using (Py.GIL())
         {
             dynamic os = Py.Import("os");
