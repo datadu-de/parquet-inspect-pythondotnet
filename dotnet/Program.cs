@@ -29,7 +29,7 @@ class Program
     }
     public static void ReadSchema(string deltaTablePath)
     {
-        Console.WriteLine("ReadHistory:");
+        Console.WriteLine("ReadSchema:");
 
         using (Py.GIL())
         {
